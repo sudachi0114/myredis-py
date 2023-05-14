@@ -7,11 +7,19 @@ class Server(object):
         self, host: str = "127.0.0.1", port: int = 16379, max_clients: int = 64
     ) -> None:
         self._pool = Pool(max_clients)
-        self._server = StreamServer((host, port), self.connection_handler, spawn=self._pool)
+        self._server = StreamServer(
+            (host, port), self.connection_handler, spawn=self._pool
+        )
 
     def connection_handler(self, socket, address):
-        socket_file = socket.makefile('rwb')
-        print(socket_file.readline())
+        socket_file = socket.makefile("rwb")
+        self.get_response(socket_file.readline())
+
+    def get_commands(self):
+        return {}
+
+    def get_response(self, request):
+        print(request)
 
     def run(self):
         self._server.serve_forever()
