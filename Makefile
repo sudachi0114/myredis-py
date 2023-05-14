@@ -9,3 +9,7 @@ clean:
 .PHONY: requirements
 requirements:
 	pip freeze > requirements.txt
+
+.PHONY: fmt
+fmt:
+	python -m black .
