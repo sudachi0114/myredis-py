@@ -1,1 +1,5 @@
-data
+# Redis data dir
+/data
+
+# python virtual env dir: venv
+/venv

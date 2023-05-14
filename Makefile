@@ -5,3 +5,7 @@ honmono:
 .PHONY: clean
 clean:
 	docker compose down
+
+.PHONY: requirements
+requirements:
+	pip freeze > requirements.txt
