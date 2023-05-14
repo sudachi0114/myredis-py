@@ -93,3 +93,7 @@ socket なサーバーと curl のように CLI で通信するには telnet を
     PHPKaigi の記事だ
   - [Echo - High performance, minimalist Go web framework](https://echo.labstack.com/) 
     しまった。これはフレームワークの Echo だった
+
+## Python code formatter
+
+* [black - Qiita](https://qiita.com/sin9270/items/85e2dab4c0144c79987d#black)
