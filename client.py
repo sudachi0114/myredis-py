@@ -17,3 +17,16 @@ class Client(object):
 
     def get(self, key):
         return self.execute("GET", key)
+
+    def repl(self):
+        while True:
+            command = input(">>>")
+            print("command: ", command)
+            if command == "exit":
+                break
+            else:
+                self.execute(command)
+
+if __name__ == "__main__":
+    cli = Client()
+    cli.repl()
