@@ -3,6 +3,34 @@
 * [codecrafters-io/build-your-own-x: Master programming by recreating your favorite technologies from scratch.](https://github.com/codecrafters-io/build-your-own-x#build-your-own-database)
 * [charles leifer | Write your own miniature Redis with Python](https://charlesleifer.com/blog/building-a-simple-redis-server-with-python/)
 
+
+# Usage
+
+## Server Usage
+
+```shell
+$ source ./venv/bin/activate
+$ python main.py
+```
+
+## Client Usage
+
+```shell
+# $ source ./venv/bin/acticate
+$ python
+Python 3.10.7 (main, Sep 26 2022, 20:33:49) [Clang 13.1.6 (clang-1316.0.21.2.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from client import Client
+>>> cli = Client()
+>>> cli.set("hoge", "fuga")
+('SET', 'hoge', 'fuga')
+>>> cli.get("hoge")
+('GET', 'hoge')
+>>> exit()
+```
+
+# Information
+
 ## Redis Container by docker (compose)
 
 * [docker-composeでredis環境をつくる - Qiita](https://qiita.com/uggds/items/5e4f8fee180d77c06ee1)
